@@ -26,8 +26,10 @@ char getResponse()
         cin >> response;
         if (response == 's' || response == 'd' || response == '1' || response == '2' || response == '3' || response == '4' || response == 'r' || response == 'q')
             done = true;
-        if (!done)
+		if (!done) {
             cout << "I do not understand." << endl;
+			done = true;
+		}
     }
     return response;
 }
@@ -49,7 +51,7 @@ int main()
     while (response != 'q')
     {
         printMenu();
-        getResponse(); C:\Users\bknud\OneDrive\Computer Science 1400
+        response = getResponse();
 
             if (response == 'q')
             {
@@ -123,9 +125,6 @@ int main()
             float totalmoney = 0;
             cout << "A grouchy-looking attendant shows up and restocks the machine." << endl;
         }
-
-
-
 
     }
 
